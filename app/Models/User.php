@@ -33,6 +33,14 @@ class User extends Authenticatable implements JWTSubject
     ];
 
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function targets(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Target::class);
+    }
+
+    /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
      * @return mixed
