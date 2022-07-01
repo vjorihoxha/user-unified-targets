@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\auth;
+namespace App\Http\Requests\Monetary;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginAuthRequest extends FormRequest
+class StoreMonetaryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class LoginAuthRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,8 +24,7 @@ class LoginAuthRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|string|email|max:255',
-            'password' => 'required|string|between:6,255',
+            //
         ];
     }
 }

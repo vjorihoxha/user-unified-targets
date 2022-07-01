@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of jwt-auth.
+ * This file is part of jwt-Authentication.
  *
  * (c) Sean Tymon <tymon148@gmail.com>
  *
@@ -286,7 +286,7 @@ return [
         |
         */
 
-        'auth' => Tymon\JWTAuth\Providers\Auth\Illuminate::class,
+        'Authentication' => Tymon\JWTAuth\Providers\Auth\Illuminate::class,
 
         /*
         |--------------------------------------------------------------------------

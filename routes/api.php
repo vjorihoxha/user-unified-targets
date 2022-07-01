@@ -23,8 +23,8 @@ Route::group([
 });
 
 Route::group([
-    'prefix' => 'user',
     'middleware' => 'jwt.verify',
+    'prefix' => 'user'
 ], function ($router) {
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');

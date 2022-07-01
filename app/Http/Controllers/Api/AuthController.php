@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Requests\auth\LoginAuthRequest;
-use App\Http\Requests\auth\RegisterAuthRequest;
+use App\Http\Requests\Authentication\LoginAuthRequest;
+use App\Http\Requests\Authentication\RegisterAuthRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -19,7 +19,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login', 'register']]);
+        $this->middleware('Authentication:api', ['except' => ['login', 'register']]);
     }
 
     /**
