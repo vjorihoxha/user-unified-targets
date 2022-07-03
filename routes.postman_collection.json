@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "9e67e3ce-7949-4eff-925d-36b1a3706871",
+		"name": "Laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Vjori Hoxha",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "vjori@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "vjori@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1NjU2MDM4NSwiZXhwIjoxNjkyODQ4Mzg1LCJuYmYiOjE2NTY1NjAzODUsImp0aSI6Indxa0ZlRExVcnRTbDI4ZHIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.iEUuFTFkfDRaLSOpzZ0pq7UlBLWkbWjLGmv07PpJWpM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Targets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1NjU2MDM4NSwiZXhwIjoxNjkyODQ4Mzg1LCJuYmYiOjE2NTY1NjAzODUsImp0aSI6Indxa0ZlRExVcnRTbDI4ZHIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.iEUuFTFkfDRaLSOpzZ0pq7UlBLWkbWjLGmv07PpJWpM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/targets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"targets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Targets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/targets",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"targets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Jul 2022 03:53:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Jul 2022 03:53:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1NjU2MDM4NSwiZXhwIjoxNjkyODQ4Mzg1LCJuYmYiOjE2NTY1NjAzODUsImp0aSI6Indxa0ZlRExVcnRTbDI4ZHIiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.iEUuFTFkfDRaLSOpzZ0pq7UlBLWkbWjLGmv07PpJWpM"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"amount\": 200,\n        \"target_date\": \"2022-07-30\",\n        \"description\": \"user must make 200 dollars of revenue in July 2022\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Vjori Hoxha\",\n            \"email\": \"vjori@mail.com\",\n            \"created_at\": \"2022-07-01 03:54:07\",\n            \"updated_at\": \"2022-07-01 03:54:07\"\n        },\n        \"targets\": {\n            \"type\": {\n                \"type\": \"monetary\"\n            },\n            \"details\": [\n                {\n                    \"nested_target_details\": [\n                        {\n                            \"amount\": 50,\n                            \"description\": \"need to be in inventory\",\n                            \"revenue_group\": {\n                                \"name\": \"inventory\",\n                                \"description\": \"some desc\",\n                                \"created_at\": \"2022-07-01 00:02:03\",\n                                \"updated_at\": \"2022-07-01 00:02:03\"\n                            },\n                            \"business_targets\": [],\n                            \"created_at\": \"2022-07-01 00:02:03\",\n                            \"updated_at\": \"2022-07-01 00:02:03\"\n                        },\n                        {\n                            \"amount\": 100,\n                            \"description\": \"need to be from memberships\",\n                            \"revenue_group\": {\n                                \"name\": \"memberships\",\n                                \"description\": \"s\",\n                                \"created_at\": \"2022-07-01 00:02:03\",\n                                \"updated_at\": \"2022-07-01 00:02:03\"\n                            },\n                            \"business_targets\": [\n                                {\n                                    \"amount\": 50,\n                                    \"description\": \"need to be renewal\",\n                                    \"business_group\": {\n                                        \"name\": \"renewal\"\n                                    },\n                                    \"created_at\": \"2022-07-01 00:02:03\",\n                                    \"updated_at\": \"2022-07-01 00:02:03\"\n                                },\n                                {\n                                    \"amount\": 50,\n                                    \"description\": \"need to be new business\",\n                                    \"business_group\": {\n                                        \"name\": \"new business\"\n                                    },\n                                    \"created_at\": \"2022-07-01 00:02:03\",\n                                    \"updated_at\": \"2022-07-01 00:02:03\"\n                                }\n                            ],\n                            \"created_at\": \"2022-07-01 00:02:03\",\n                            \"updated_at\": \"2022-07-01 00:02:03\"\n                        },\n                        {\n                            \"amount\": 50,\n                            \"description\": \"services\",\n                            \"revenue_group\": {\n                                \"name\": \"services\",\n                                \"description\": \"s\",\n                                \"created_at\": \"2022-07-01 00:02:03\",\n                                \"updated_at\": \"2022-07-01 00:02:03\"\n                            },\n                            \"business_targets\": [],\n                            \"created_at\": \"2022-07-01 00:02:03\",\n                            \"updated_at\": \"2022-07-01 00:02:03\"\n                        }\n                    ],\n                    \"created_at\": \"2022-07-01 00:02:03\",\n                    \"updated_at\": \"2022-07-01 00:02:03\"\n                }\n            ]\n        },\n        \"created_at\": \"2022-07-01 00:02:03\",\n        \"updated_at\": \"2022-07-01 00:02:03\"\n    },\n    {\n        \"id\": 3,\n        \"amount\": 20,\n        \"target_date\": \"2022-07-30\",\n        \"description\": \"user must make 20 phone calls in july 2022\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Vjori Hoxha\",\n            \"email\": \"vjori@mail.com\",\n            \"created_at\": \"2022-07-01 03:54:07\",\n            \"updated_at\": \"2022-07-01 03:54:07\"\n        },\n        \"targets\": {\n            \"type\": {\n                \"type\": \"numeric\"\n            },\n            \"details\": [\n                {\n                    \"nested_target_details\": [\n                        {\n                            \"amount\": 10,\n                            \"description\": \"10 need to be prospect calls\",\n                            \"call_purpose\": {\n                                \"id\": 1,\n                                \"name\": \"prospect\",\n                                \"created_at\": \"2022-07-01T00:02:15.000000Z\",\n                                \"updated_at\": \"2022-07-01T00:02:15.000000Z\",\n                                \"deleted_at\": null\n                            },\n                            \"created_at\": \"2022-07-01 00:02:15\",\n                            \"updated_at\": \"2022-07-01 00:02:15\"\n                        },\n                        {\n                            \"amount\": 10,\n                            \"description\": \"10 need to be renewal calls\",\n                            \"call_purpose\": {\n                                \"id\": 2,\n                                \"name\": \"renewal\",\n                                \"created_at\": \"2022-07-01T00:02:15.000000Z\",\n                                \"updated_at\": \"2022-07-01T00:02:15.000000Z\",\n                                \"deleted_at\": null\n                            },\n                            \"created_at\": \"2022-07-01 00:02:15\",\n                            \"updated_at\": \"2022-07-01 00:02:15\"\n                        }\n                    ],\n                    \"created_at\": \"2022-07-01 00:02:03\",\n                    \"updated_at\": \"2022-07-01 00:02:03\"\n                }\n            ]\n        },\n        \"created_at\": \"2022-07-01 00:43:03\",\n        \"updated_at\": \"2022-07-01 00:02:03\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
