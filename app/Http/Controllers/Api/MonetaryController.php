@@ -20,16 +20,6 @@ class MonetaryController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\Monetary\StoreMonetaryRequest  $request
@@ -47,17 +37,6 @@ class MonetaryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Monetary $monetary)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Monetary  $monetary
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Monetary $monetary)
     {
         //
     }

@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Target extends Model
 {
     use HasFactory, SoftDeletes;
+    use \Staudenmeir\EloquentHasManyDeep\HasRelationships;
+
+    protected $fillable = [
+        'amount'
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -41,4 +46,12 @@ class Target extends Model
     {
         return $this->hasMany(Numeric::class);
     }
+
+    public function businessTypeTarget()
+    {
+        return $this->hasManyDeep( BusinessTypeTarget::class, [Monetary::class, RevenueGroupTarget::class]);
+    }
+
+
+
 }

@@ -20,16 +20,6 @@ class NumericController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\Numeric\StoreNumericRequest  $request
@@ -47,17 +37,6 @@ class NumericController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Numeric $numeric)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Numeric  $numeric
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Numeric $numeric)
     {
         //
     }

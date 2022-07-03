@@ -20,16 +20,6 @@ class TargetTypeController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\TargetType\StoreTargetTypeRequest  $request
@@ -47,17 +37,6 @@ class TargetTypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(TargetType $targetType)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\TargetType  $targetType
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(TargetType $targetType)
     {
         //
     }

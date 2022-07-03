@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\TargetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,15 +19,25 @@ Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
 ], function ($router) {
-    Route::post('login', 'AuthController@login')->name('login');
-    Route::post('register', 'AuthController@register')->name('register');
+    Route::post('login', [AuthController::class, 'login'])->name('login');
+    Route::post('register', [AuthController::class, 'register'])->name('register');
 });
 
 Route::group([
     'middleware' => 'jwt.verify',
-    'prefix' => 'user'
 ], function ($router) {
-    Route::post('logout', 'AuthController@logout');
-    Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
+
+    Route::group([
+        'prefix' => 'user'
+    ], function ($router) {
+        Route::post('logout', [AuthController::class, 'logout']);
+        Route::post('refresh', [AuthController::class, 'refresh']);
+        Route::post('me', [AuthController::class, 'me']);
+    });
+
+    Route::group([
+        'prefix' => 'targets'
+    ], function ($router) {
+        Route::get('/', [TargetController::class, 'index']);
+    });
 });

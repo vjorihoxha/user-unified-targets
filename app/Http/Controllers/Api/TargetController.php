@@ -5,28 +5,40 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Target\StoreTargetRequest;
 use App\Http\Requests\Target\UpdateTargetRequest;
+use App\Http\Resources\TargetResource;
 use App\Models\Target;
+use App\Services\TargetService;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class TargetController extends Controller
 {
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @var targetService
      */
-    public function index()
+    protected $targetService;
+
+    /**
+     * TargetController Constructor
+     *
+     * @param TargetService $targetService
+     *
+     */
+    public function __construct(TargetService $targetService)
     {
-        //
+        $this->targetService = $targetService;
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * Display a listing of the resource.
+     * @apiResourceCollection App\Http\Resources\TargetResource
+     * @apiResourceModel App\Models\Target
+     * @return ResourceCollection
      */
-    public function create()
+    public function index()
     {
-        //
+        //TODO: Unified logging and error handling
+        return TargetResource::collection($this->targetService->getAll());
     }
 
     /**
@@ -51,16 +63,6 @@ class TargetController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Target  $target
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Target $target)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.

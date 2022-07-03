@@ -20,16 +20,6 @@ class BusinessTypeTargetController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\BusinessTypeTarget\StoreBusinessTypeTargetRequest  $request
@@ -47,17 +37,6 @@ class BusinessTypeTargetController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(BusinessTypeTarget $businessTypeTarget)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\BusinessTypeTarget  $businessTypeTarget
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(BusinessTypeTarget $businessTypeTarget)
     {
         //
     }

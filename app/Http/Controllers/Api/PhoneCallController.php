@@ -20,16 +20,6 @@ class PhoneCallController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\PhoneCall\StorePhoneCallRequest  $request
@@ -47,17 +37,6 @@ class PhoneCallController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(PhoneCall $phoneCall)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\PhoneCall  $phoneCall
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(PhoneCall $phoneCall)
     {
         //
     }
